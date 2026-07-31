@@ -29,7 +29,16 @@ I created this portfolio to demonstrate my practical experience while studying I
 
 ## 📂 Projects
 
-Projects will be added here as I complete them.
+| Project | Status |
+|---------|--------|
+| Windows Network Diagnostics | ✅ Completed |
+| Windows Troubleshooting | 🚧 Coming Soon |
+| Microsoft 365 Administration | 🚧 Coming Soon |
+| Active Directory Lab | 🚧 Coming Soon |
+| ServiceNow Labs | 🚧 Coming Soon |
+| Jira Ticket Management | 🚧 Coming Soon |
+| Help Desk Case Studies | 🚧 Coming Soon |
+
 
 ## 📫 Connect with Me
 
