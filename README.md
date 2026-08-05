@@ -2,7 +2,7 @@
 A portfolio documenting my hands on IT Support labs, troubleshooting projects, networking exercises, windows/Linux administration and Microsoft 365 practice.
  👋 Welcome to My IT Support Portfolio
 
-Hi! My name is Asna Husna.
+Hi! My name is Farida Abdul Ganew.
 
 This repository documents my hands-on IT Support learning journey.
 
