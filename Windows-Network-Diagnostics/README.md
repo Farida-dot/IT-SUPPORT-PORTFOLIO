@@ -26,23 +26,30 @@ This lab was performed to understand how Windows networking commands can be used
 
 ## Commands Used
 
-### ipconfig
-
-Purpose:
-Displays the current IPv4 address, subnet mask, and default gateway.
-
-Observation:
-(Add your own observation here.)
-
----
-
 ### ipconfig /all
 
 Purpose:
-Displays detailed network information including DHCP status and DNS servers.
+Displays detailed network information including DHCP server, DNS SERVERS, MAC Address, and lease information.
+
+**Screenshot**
+{ipconfig /all} {screenshots/ipconfig.png}
 
 Observation:
-(Add your own observation.)
+The computer is successfully connected to a DHCP server, has a MAC address and a lease information.
+
+
+---
+
+### ipconfig 
+
+Purpose:
+Displays the computer's IP address, subnet mask, and default gateway.
+
+**Screenshot**
+{ipconfig} {screenshot/ipconfig.png}
+
+Observation:
+The computer received a valid IPv4 address from the DHCP server. The subnet mask and default gateway were also assigned correctly, indicating the network configuration was succesful.
 
 ---
 
@@ -51,8 +58,11 @@ Observation:
 Purpose:
 Tests connectivity between the computer and another device or website.
 
+**Screenshots**
+{ping} {screenshot/ping.png}
+
 Observation:
-(Add your own observation.)
+Google was responsive and there 0 packet loss , showing connectivity was working.
 
 ---
 
@@ -61,8 +71,10 @@ Observation:
 Purpose:
 Shows the path packets take across the network.
 
+**Screeenshots**
+{tracert} [Screenshot/tracert.png}
 Observation:
-(Add your own observation.)
+some hops timed out because a few routers do not respond to traceroute requests, but trace still reached successfully
 
 ---
 
@@ -71,8 +83,11 @@ Observation:
 Purpose:
 Checks whether DNS can resolve domain names into IP addresses.
 
+**Screenshot**
+{nslooup} {screenshot/nslookup.png}
+
 Observation:
-(Add your own observation.)
+DNS successfully resolvedgoogle.com to multiple IP4 and IPV6 addresses 
 
 ---
 
