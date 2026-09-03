@@ -1,0 +1,74 @@
+# Active Directory Home Lab
+
+## Overview
+
+This lab documents my hands-on practice building a Windows Server and Active Directory environment using Microsoft Hyper-V.
+
+The environment was created to practice skills commonly used in IT Support and system administration, including virtualization, Windows Server administration, networking, Active Directory, user and group management, and troubleshooting.
+
+## Phase 1: Hyper-V and Windows Server Setup
+
+### Lab Environment
+
+- Hypervisor: Microsoft Hyper-V
+- Server OS: Windows Server 2025 Evaluation
+- Virtual Machine Name: DC01
+- VM Generation: Generation 2
+- Memory: 4 GB
+- Virtual Network: AD-Lab
+- Network Type: Internal Virtual Switch
+
+### Network Configuration
+
+The lab uses an isolated internal network between the Hyper-V host and the Windows Server virtual machine.
+
+**Hyper-V Host**
+- IP Address: 192.168.50.1
+- Subnet Mask: 255.255.255.0
+
+**DC01**
+- IP Address: 192.168.50.10
+- Subnet Mask: 255.255.255.0
+- DNS Server: 192.168.50.10
+- DHCP: Disabled
+
+### Troubleshooting Performed
+
+During configuration, DC01 received an APIPA address (169.254.x.x) because the virtual network did not provide DHCP.
+
+I identified the issue using:
+
+- ipconfig /all
+- ping
+- arp -a
+
+I configured DC01 with a static IPv4 address of 192.168.50.10.
+
+Ping tests initially timed out even after the correct IP configuration was applied. ARP confirmed that the Hyper-V host and DC01 could discover each other at Layer 2.
+
+I then checked Windows Defender Firewall and enabled the inbound ICMPv4 Echo Request rule for the lab environment.
+
+A final connectivity test from the Hyper-V host to DC01 returned:
+
+- Sent: 4
+- Received: 4
+- Lost: 0
+- Packet loss: 0%
+
+This confirmed successful communication between the Hyper-V host and DC01.
+
+## Skills Practiced
+
+- Hyper-V virtual machine creation
+- Windows Server installation
+- Virtual switch configuration
+- Static IPv4 configuration
+- APIPA troubleshooting
+- Windows Defender Firewall configuration
+- Ping testing
+- ARP troubleshooting
+- Basic Layer 2 and Layer 3 network troubleshooting
+
+## Next Phase
+
+Install Active Directory Domain Services (AD DS) and promote DC01 to a domain controller.
