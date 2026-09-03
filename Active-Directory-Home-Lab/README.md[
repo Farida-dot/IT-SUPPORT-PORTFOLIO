@@ -57,6 +57,37 @@ A final connectivity test from the Hyper-V host to DC01 returned:
 
 This confirmed successful communication between the Hyper-V host and DC01.
 
+## Lab Evidence
+
+### Initial Connectivity Failure
+
+The initial ping test from the Hyper-V host to DC01 failed with 100% packet loss.
+
+![Initial ping failure](screenshots/01-host-to-dc01-initial-ping-failure.jpg)
+
+### Static IP Configuration and Troubleshooting
+
+DC01 was configured with the static IPv4 address `192.168.50.10/24`. Connectivity testing initially continued to fail, requiring further investigation.
+
+![DC01 static IP troubleshooting](screenshots/02-dc01-static-ip-and-ping-failure.jpg)
+
+### ARP Verification
+
+I used `arp -a` to verify Layer 2 communication. DC01 successfully discovered the Hyper-V host at `192.168.50.1`, confirming that the virtual network itself was functioning.
+
+![ARP verification](screenshots/03-dc01-arp-host-discovery.jpg)
+
+### Successful Connectivity Test
+
+After enabling the appropriate ICMPv4 inbound firewall rule, the Hyper-V host successfully communicated with DC01.
+
+The final ping test returned:
+
+- Packets sent: 4
+- Packets received: 4
+- Packet loss: 0%
+
+![Successful ping to DC01](screenshots/04-successful-host-to-dc01-ping.jpg)
 ## Skills Practiced
 
 - Hyper-V virtual machine creation
