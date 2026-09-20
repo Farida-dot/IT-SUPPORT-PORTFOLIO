@@ -1,3 +1,3 @@
 # Lab Screenshots
 
-Screenshots documenting the configuration and troubleshooting performed during the Active Directory home lab.
+Chronological evidence from the Hyper-V, networking, and Active Directory lab.
