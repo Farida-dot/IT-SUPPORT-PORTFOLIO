@@ -37,7 +37,7 @@ I created this portfolio to demonstrate my practical experience while studying I
 | Active Directory Lab | Completed|
 | ServiceNow Labs | 🚧 Coming Soon |
 | Jira Ticket Management | 🚧 Coming Soon |
-| Help Desk Case Studies | 🚧 Coming Soon |
+| Help Desk Case Studies | completed |
 
 
 ## 📫 Connect with Me
